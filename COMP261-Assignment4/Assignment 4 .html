@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)https://ecs.victoria.ac.nz/Courses/COMP261_2019T1/Assignment4 -->
+<html lang="en" class="gr__ecs_victoria_ac_nz"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="./Assignment 4 _files/style.css" type="text/css" media="all">
+<title>   Assignment 4 - Courses/COMP261_2019T1 | ECS | Victoria University of Wellington</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.5, user-scalable=yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="icon" href="https://ecs.victoria.ac.nz/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="https://ecs.victoria.ac.nz/favicon.ico" type="image/x-icon">
+<link rel="alternate" href="https://ecs.victoria.ac.nz/foswiki/bin/edit/Courses/COMP261_2019T1/Assignment4?t=1557698361" type="application/x-wiki" title="edit Assignment4">
+<meta name="TEXT_NUM_TOPICS" content="Number of topics:">
+<meta name="TEXT_MODIFY_SEARCH" content="Modify search">
+
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://ecs.victoria.ac.nz/Courses/COMP261_2019T1/WebRss">
+<!--<base href="https://ecs.victoria.ac.nz/Courses/COMP261_2019T1/Assignment4">--><base href="."><!--[if IE]></base><![endif]-->
+<link class="head DpSyntaxHighlighterPlugin::STYLE" type="text/css" rel="stylesheet" href="./Assignment 4 _files/shCore.css"><link class="head DpSyntaxHighlighterPlugin::STYLE" type="text/css" rel="stylesheet" href="./Assignment 4 _files/shThemeDefault.css"><!--DpSyntaxHighlighterPlugin::STYLE-->
+<link class="head JQUERYPLUGIN::COMMENT" rel="stylesheet" href="./Assignment 4 _files/comment.css" type="text/css" media="all"><!--JQUERYPLUGIN::COMMENT-->
+<link class="head SMILIESPLUGIN" rel="stylesheet" href="./Assignment 4 _files/smilies.css" type="text/css" media="all"><!--SMILIESPLUGIN-->
+<link rel="stylesheet" href="./Assignment 4 _files/base.css" media="all" type="text/css">
+<link rel="stylesheet" href="./Assignment 4 _files/layout.css" media="all" type="text/css">
+<link rel="stylesheet" href="./Assignment 4 _files/style(1).css" media="all" type="text/css">
+<link rel="stylesheet" href="./Assignment 4 _files/colors.css" media="all" type="text/css">
+<link rel="stylesheet" href="./Assignment 4 _files/column_left.css" media="all" type="text/css">
+<link rel="stylesheet" href="./Assignment 4 _files/variant_foswiki_noframe.css" media="all" type="text/css">
+<style type="text/css" media="all">
+	/* Styles that are set using variables */
+	.patternBookView .foswikiTopRow,
+	.patternWebIndicator,
+	.patternWebIndicator a {
+		background-color:#6633CC;
+	}
+	#patternTopBarContents { background-image:url(/foswiki/pub/System/PatternSkin/header5.gif); background-repeat:repeat-x;}
+#patternTopBarContents { background-color:#ffffff;}
+.patternBookView {
+	border-color:#6633CC;
+}
+.patternPreviewPage #patternMain {
+	/* uncomment to set the preview image */
+	/*background-image:url("/foswiki/pub/System/PreviewBackground/preview2bg.gif");*/
+}
+</style>
+<link rel="stylesheet" href="./Assignment 4 _files/print.css" media="print" type="text/css">
+
+<link rel="stylesheet" href="./Assignment 4 _files/toolkit.min.css" id="currentStylesheet">
+<link rel="stylesheet" href="./Assignment 4 _files/foswiki.css">
+
+<script class="script JQUERYPLUGIN" type="text/javascript" src="./Assignment 4 _files/jquery-2.2.4.js"></script><!--JQUERYPLUGIN-->
+<script class="script JQUERYPLUGIN::LIVEQUERY" type="text/javascript" src="./Assignment 4 _files/jquery.livequery.js"></script><!--JQUERYPLUGIN::LIVEQUERY-->
+<script class="script JQUERYPLUGIN::MIGRATE" type="text/javascript" src="./Assignment 4 _files/jquery.migrate.js"></script><!--JQUERYPLUGIN::MIGRATE-->
+<script class="script JQUERYPLUGIN::FOSWIKI" type="text/javascript" src="./Assignment 4 _files/jquery.foswiki.js"></script><!--JQUERYPLUGIN::FOSWIKI-->
+<script class="script DpSyntaxHighlighterPlugin::SCRIPT" type="text/javascript" src="./Assignment 4 _files/shCore.js"></script><script class="script DpSyntaxHighlighterPlugin::SCRIPT" type="text/javascript">
+// use SyntaxHighlighter namespace
+SyntaxHighlighter.render = function(){
+  SyntaxHighlighter.config.clipboardSwf = '/foswiki/pub/System/DpSyntaxHighlighterPlugin/dp.SyntaxHighlighter/scripts/clipboard.swf';
+  SyntaxHighlighter.config.tagName = 'pre';
+  SyntaxHighlighter.highlight();
+  SyntaxHighlighter.config.tagName = 'textarea';
+  SyntaxHighlighter.highlight();
+}
+if (typeof jQuery != 'undefined') {
+  // jQuery
+  jQuery(document).ready(SyntaxHighlighter.render);
+} else if (typeof YAHOO != "undefined") {
+  // YUI
+  YAHOO.util.Event.onDOMReady(SyntaxHighlighter.render);
+} else if (typeof foswiki != "undefined"){
+  // foswiki
+  foswiki.Event.addLoadEvent(SyntaxHighlighter.render);
+} else {
+  alert("Can't add load event for DpSyntaxHighlighterPlugin. Please contact your System Administrator.");
+}
+</script><!--DpSyntaxHighlighterPlugin::SCRIPT-->
+<script class="script DpSyntaxHighlighterPlugin::LANG::Java" type="text/javascript" src="./Assignment 4 _files/shBrushJava.js"></script><!--DpSyntaxHighlighterPlugin::LANG::Java-->
+<script class="script JQUERYPLUGIN::COMMENT" type="text/javascript" src="./Assignment 4 _files/comment.js"></script><!--JQUERYPLUGIN::COMMENT-->
+<script class="script JQUERYPLUGIN::FOSWIKI::PREFERENCES foswikiPreferences" type="text/json">{
+   "SERVERTIME" : "13 May 2019 - 09:59",
+   "USERSWEB" : "Main",
+   "SCRIPTURLPATH" : "/foswiki/bin",
+   "SCRIPTURL" : "https://ecs.victoria.ac.nz/foswiki/bin",
+   "WIKINAME" : "WikiGuest",
+   "WIKIUSERNAME" : "Main.WikiGuest",
+   "SKIN" : "vuwecsv2, pattern ",
+   "PUBURL" : "https://ecs.victoria.ac.nz/foswiki/pub",
+   "SCRIPTURLPATHS" : {
+      "view" : ""
+   },
+   "COOKIEREALM" : "",
+   "SYSTEMWEB" : "System",
+   "URLHOST" : "https://ecs.victoria.ac.nz",
+   "USERNAME" : "guest",
+   "NAMEFILTER" : "[\\\\\\s*?~^$@%`\"'&|<:;>\\[\\]#\\x00-\\x1f]",
+   "TOPIC" : "Assignment4",
+   "WEB" : "Courses/COMP261_2019T1",
+   "SCRIPTSUFFIX" : "",
+   "PUBURLPATH" : "/foswiki/pub"
+}
+</script><!--JQUERYPLUGIN::FOSWIKI::PREFERENCES-->
+<script class="script JavascriptFiles/foswikiString" type="text/javascript" src="./Assignment 4 _files/foswikiString.js"></script><!--JavascriptFiles/foswikiString-->
+<script class="script JavascriptFiles/foswikiForm" type="text/javascript" src="./Assignment 4 _files/foswikiForm.js"></script><!--JavascriptFiles/foswikiForm-->
+<script class="script JavascriptFiles/foswikiPref" type="text/javascript" src="./Assignment 4 _files/foswikiPref.js"></script><!--JavascriptFiles/foswikiPref-->
+<script class="script PatternSkin/pattern" type="text/javascript" src="./Assignment 4 _files/pattern.js"></script><!--PatternSkin/pattern-->
+</head> 
+<body class="patternViewPage foswikiHasNoChangePermission foswikiGuest foswikiJs" data-gr-c-s-loaded="true">
+<span id="PageTop"></span>
+<div class="global" id="global-nav">
+  <div class="menu-toggle horisontal-links">
+	 <a href="javascript:void(0);">
+		<div class="logo-mini">&nbsp;</div>
+	 </a>
+	 <a href="javascript:void(0);" class="js-toggle-global-nav" role="button" aria-label="Toggle Navigation">
+		<span class="tcon tcon-menu--xcross" aria-label="toggle menu" style="float:right;">
+		  <span class="tcon-menu__lines" aria-hidden="true"></span>
+		  <span class="tcon-visuallyhidden">toggle menu</span>
+		</span>
+	 </a>
+  </div>
+  <div class="menu">
+	 <nav>
+		<div class="search">
+		  <form method="get" action="https://ecs.victoria.ac.nz/vuwsearch">
+			 <div role="search">
+				<a href="javascript:void(0);" class="js-toggle-global-search hide-on-mobile">
+				  <span class="tcon tcon-search--xcross " aria-label="toggle search">
+					 <span class="tcon-search__item" aria-hidden="true"></span>
+					 <span class="tcon-visuallyhidden">toggle search</span>
+				  </span>
+				</a>
+				<label class="input-wrapper -icon-search" id="global-search">
+				  <input autocomplete="off" name="q" placeholder="Search Victoria for…" required="" type="text">
+				  <input value="Go" type="submit">
+				</label>
+			 </div>
+		  </form>
+		  <div class="horisontal-links align-center hide-on-desktop">
+			 <a href="https://victoria.ac.nz/"><span class="icon-home"></span>Home</a>
+			 <a href="https://www.victoria.ac.nz/about/contacts"><span class="icon-phone"></span>Contact</a>
+		  </div>
+		</div>
+		<div id="menu">
+		  <a href="https://www.victoria.ac.nz/" class="home">
+			 <span class="icon-home hanging-icon"></span>
+			 <span class="hide-on-desktop">Victoria's main site</span>
+		  </a>
+		  <a href="https://www.victoria.ac.nz/study">Future students</a>
+		  <a href="https://www.victoria.ac.nz/international">International students</a>
+		  <a href="https://www.victoria.ac.nz/students">Current students</a>
+		  <a href="https://www.victoria.ac.nz/research">Research</a>
+		  <a href="https://www.victoria.ac.nz/about">About Victoria</a>
+		  <a href="https://ecs.victoria.ac.nz/login?ReturnUrl=https:%2f%2fecs.victoria.ac.nz%2fCourses%2fCOMP261_2019T1%2fAssignment4">Log In</a>
+		</div>
+	 </nav>
+	 <nav class="site" role="navigation">
+		<a href="https://www.victoria.ac.nz/ecs" class="back hide-on-desktop">
+		  <span class="icon-back hanging-icon"></span>
+		  <div class="">
+			 <div>School of Engineering and Computer Science</div>
+			 <div lang="mi">Te Kura Mātai Pūkaha, Pūrorohiko</div>
+		  </div>
+		</a>
+		<ul>
+		  <li>
+			 <ul>
+				<li><a class="foswikiCurrentWebHomeLink" href="https://ecs.victoria.ac.nz/Courses/COMP261_2019T1/WebHome">COMP261 home</a> <ul>
+<li> <a href="https://ecs.victoria.ac.nz/Courses/COMP261_2019T1/CourseOutline">Course Outline</a>
+</li> <li> <a href="https://ecs.victoria.ac.nz/Courses/COMP261_2019T1/LectureSchedule">Lecture Schedule</a>
+</li> <li> <a href="https://ecs.victoria.ac.nz/Courses/COMP261_2019T1/Assignments">Assignments</a>
+</li> <li> <a href="https://ecs.victoria.ac.nz/Courses/COMP261_2019T1/Timetable">Timetable</a>
+</li> <li> <a href="https://apps.ecs.vuw.ac.nz/submit/COMP261">Submission</a>
+</li> <li> <a href="https://ecs.victoria.ac.nz/cgi-bin/yabb/YaBB.pl?board=COMP261_2019T1">Forum</a>
+</li> <li> <a href="https://blackboard.vuw.ac.nz/webapps/blackboard/execute/launcher?type=Course&amp;id=_100263_1">Blackboard</a>
+</li></ul> 
+<!--   * <a href="https://victoria.rl.talis.com/lists/NOT_SET.html">Reading List</a>-->
+</li>
+			 </ul>
+		  </li>
+		</ul>
+	 </nav>
+  </div>
+</div>
+<header class="site-header">
+  <div class="centraliser block">
+	 <!-- Logotype -->
+	 <div class="logo">
+		<a href="https://www.victoria.ac.nz/" title="Victoria University of Wellington homepage">
+		  <picture>
+		  <source media="(max-width: 68em)" srcset="/vic-ui-kit/images/logo-white-portrait.svg">
+			 <img src="./Assignment 4 _files/logo-white-full.svg" alt="Victoria University of Wellington - Te Whare Wānanga o te Ūpoko o te Ika a Māui">
+		  </picture>
+		</a>
+	 </div>
+	 <!-- Site name and header block -->
+	 <div class="site-intro">
+		<a href="https://www.victoria.ac.nz/ecs" title="School of Engineering and Computer Science">
+		  <h1>
+			 <span class="preline">School of</span>
+			 Engineering and Computer Science
+			 <small lang="mi">Te Kura Mātai Pūkaha, Pūrorohiko</small>
+		  </h1>
+		</a>
+	 </div>
+  </div>
+</header> 
+<a href="javascript:;" id="btn-up" title="Go to the top of the page" class="btn-floating sticky bottom" tabindex="-1"><span class="icon-arrow-up"></span></a>
+<section class="layout centraliser block foswikiPage"> 
+<div class="sidebar">
+  <nav class="site" role="navigation">
+	 <ul>
+		<li><a class="foswikiCurrentWebHomeLink" href="https://ecs.victoria.ac.nz/Courses/COMP261_2019T1/WebHome">COMP261 home</a> <ul>
+<li> <a href="https://ecs.victoria.ac.nz/Courses/COMP261_2019T1/CourseOutline">Course Outline</a>
+</li> <li> <a href="https://ecs.victoria.ac.nz/Courses/COMP261_2019T1/LectureSchedule">Lecture Schedule</a>
+</li> <li> <a href="https://ecs.victoria.ac.nz/Courses/COMP261_2019T1/Assignments">Assignments</a>
+</li> <li> <a href="https://ecs.victoria.ac.nz/Courses/COMP261_2019T1/Timetable">Timetable</a>
+</li> <li> <a href="https://apps.ecs.vuw.ac.nz/submit/COMP261">Submission</a>
+</li> <li> <a href="https://ecs.victoria.ac.nz/cgi-bin/yabb/YaBB.pl?board=COMP261_2019T1">Forum</a>
+</li> <li> <a href="https://blackboard.vuw.ac.nz/webapps/blackboard/execute/launcher?type=Course&amp;id=_100263_1">Blackboard</a>
+</li></ul> 
+<!--   * <a href="https://victoria.rl.talis.com/lists/NOT_SET.html">Reading List</a>-->
+</li>
+	 </ul>
+  </nav> 
+</div> 
+	 <div class="content-panel"><nav aria-label="breadcrumb" role="navigation"><ul class="breadcrumbs block"><li><a href="https://ecs.victoria.ac.nz/">School of Engineering and Computer Science</a></li><li><a href="https://ecs.victoria.ac.nz/Courses/COMP261_2019T1/">Courses/COMP261_2019T1</a></li><li><a href="https://ecs.victoria.ac.nz/Courses/COMP261_2019T1/Assignments">Assignments</a></li><li>Assignment4</li></ul></nav>
+<main>
+<div class="block formatting">
+  <div class="foswikiTopic"><h1 id="COMP_261_402019_41_45_Assignment_4">  COMP 261 (2019) - Assignment 4 </h1>
+<p></p> <ul>
+<li> Handout can be found below.   <!-- <a href="https://ecs.victoria.ac.nz/foswiki/pub/Courses/COMP261_2019T1/Assignment4/handout.pdf">Handout</a> -->
+</li> <li> <a href="https://ecs.victoria.ac.nz/foswiki/pub/Courses/COMP261_2019T1/Assignment4/code.zip">code.zip</a>
+</li> <li> <a href="https://ecs.victoria.ac.nz/foswiki/pub/Courses/COMP261_2019T1/Assignment4/data.zip">data.zip</a>
+</li> <li> <a href="https://ecs.victoria.ac.nz/foswiki/pub/Courses/COMP261_2019T1/Assignment4/marksheet.txt">Marking guide</a>
+</li></ul> 
+<p></p>
+<strong>NB!</strong> The submission link can be found on the left or on the <a href="https://ecs.victoria.ac.nz/Courses/COMP261_2019T1/Assignments">Assignments</a> page.
+<p></p>
+<span class="foswikiRedFG">Important: Part of this assignment will be auto marked.  Please do not modify the template code's file names or class names.  In particular, DO NOT modify the <code>World.java</code> file.</span>
+<p></p>
+<h4 id="Goal">  Goal </h4>
+The goal of this assignment is to design and implement a parser and interpreter for a simple programming language to control simple robots.
+<p></p>
+<h4 id="To_Submit">  To Submit </h4> <ul>
+<li> The Java sources of the entire program, including your parser (your <code>Parser.java</code> file, along with any additional files required by your parser) and the robot simulation code.
+</li> <li> Your <code>report.txt</code> file.  See end of handout for details of what this should include.
+</li></ul> 
+<p></p>
+<h3 id="Introduction">  Introduction </h3>
+<p></p>
+A variety of applications allow the user to "script" the application, or
+otherwise specify domain-specific programs to control, modify, or extend the
+application.  Many advanced computer games have this facility, as do many
+sophisticated editors.  All these applications provide some
+kind of domain-specific language for specifying the scripts/programs, and must
+therefore also have a parser and interpreter to parse and execute the scripts.
+<p></p>
+In this assignment, your task will be to design and implement a
+parser and interpreter for a simple programming language that can be
+used to control robots for a simple robot game.  The RoboGame program
+is written already; your task is to add the parser and interpreter.
+<p></p>
+We will provide a set of programs for testing each stage of your language interpreter.
+<p></p>
+Although it is not part of the assignment, you may wish to publish any  robot programs you write on the forum so that other students can try running their robot programs against yours.
+<p></p>
+<h3 id="RoboGame">  RoboGame </h3>
+<p></p>
+RoboGame is a program for a simple game involving two robots moving in a 2D grid
+based world that contains barrels of fuel.  The goal of the "game" is survival - the winner is the robot that still has fuel when the other one has run out. 
+<p></p> <ul>
+<li> The robots start in opposite corners of the grid, and can move around the world.  At each step, a robot may move forward one step, turn left, right or completely around, or remain where it is.
+</li> <li> The robots require fuel, and use some up on every step.  Their fuel level is displayed by a coloured arc that gets shorter as the fuel runs down.  When the fuel level in one of the robots reaches zero, the robot stops and the game ends.
+</li> <li> Barrels of fuel appear at random places in the world. A robot that is on top of a barrel can take fuel from the barrel.
+</li> <li> A robot can also steal fuel from the other robot, if it is next to and facing the other, and the other robot doesn't have its shield up.  Using the shield costs extra fuel.
+</li> <li> Each robot is controlled by a program which determines its behaviour.  The program may be provided by the user --- if no program is provided the robot performs a built-in default procedure, which constantly chases the closest barrel.  So the real aim of the game is to write a robot program that will beat any other robot program.
+</li></ul> 
+<p></p>
+The game has buttons for starting the game, and resetting the game to the start state.  It also has a menu for loading user programs into the robots.
+<p></p>
+<h3 id="The_Robot_Language">  The Robot Language </h3>
+<p></p>
+The robot language has commands directing the robot to perform various basic actions (<code>move</code>, <code>turnL</code>, etc) and test various sensors (<code>fuelLeft</code>, <code>wallDist</code>, etc).  It also includes control structures (loops and conditionals) and operators for calculating and comparing.  
+ A grammar for the full language is given below.
+<p></p>
+ Note: In this grammar (and later ones): Uppercase terms are NON-TERMINALS, terminals are enclosed in double quotes, [...] means optional, * means zero or more occurrences of the preceding item, + means one or more occurrences of the preceding item, | is used to separate alternatives, ::= separates the left and right hand sides of a definition, and VAR and NUM are defined by regular expressions.
+<p></p>
+<pre>PROG  ::= STMT*
+STMT  ::= ACT ";" | LOOP | IF | WHILE | ASSGN ";" 
+LOOP  ::= "loop" BLOCK
+IF    ::= "if" "(" COND ")" BLOCK [ "elif"  "(" COND ")"  BLOCK ]* [ "else" BLOCK ]
+WHILE ::= "while" "(" COND ")" BLOCK
+ASSGN ::= VAR "=" EXP
+BLOCK ::= "{" STMT+ "}"
+ACT   ::= "move" [ "(" EXP ")" ] | "turnL" | "turnR" | "turnAround" | 
+          "shieldOn" | "shieldOff" | "takeFuel" | "wait" [ "(" EXP ")" ]
+EXP   ::= NUM | SEN | VAR | OP "(" EXP "," EXP ")"  
+SEN   ::= "fuelLeft" | "oppLR" | "oppFB" | "numBarrels" |
+          "barrelLR" [ "(" EXP ")" ] | "barrelFB" [ "(" EXP ")" ] | "wallDist"
+OP   ::= "add" | "sub" | "mul" | "div"
+COND  ::= RELOP "(" EXP "," EXP ")"  | and ( COND, COND ) | or ( COND, COND )  | not ( COND )  
+RELOP ::= "lt" | "gt" | "eq"
+VAR   ::= "\\$[A-Za-z][A-Za-z0-9]*"       
+NUM   ::= "-?[0-9]+"
+</pre>
+Notes: <ul>
+<li> None of the actions require arguments, but <code>move</code> and <code>wait</code> can take an optional argument.
+</li> <li> The conditions in <code>if</code> and <code>while</code> statements can involve comparisons of integer valued expressions, or logical combinations of them using <code>and</code>, <code>or</code> and <code>not</code>.
+</li> <li> Expressions specifying values  (<code>EXP</code>) can be sensor values, actual numbers, variables, or arithmetic expressions using <code>add</code>, <code>sub</code>, <code>mul</code>, or <code>div</code>.
+</li> <li> Expressions are written in a prefix/functional form (e.g. <code>eq(barrelFB, 0)</code> or <code>add(5,1)</code>) for ease of parsing.  This will be replaced by infix expressions in the last part of the assignment.
+</li> <li> Variable names must start with a $, and variables can have numeric values assigned to them. The specification is a Java regular expression that matches variable names.
+</li> <li> Numbers are integers, with an optional -ve sign. The specification is Java regular expression that matches numbers. 
+</li> <li> The sensors <code>oppLR</code>, <code>oppFB</code>, <code>barrelLR</code>, and <code>barrelFB</code> return the position of the opponent robot or the closest barrel, relative to the current position and direction of the robot. <code>LR</code> means the distance to the left (-ve) or right (+ve) , <code>FB</code> means the distance in front (+ve) or behind (-ve). If there are no barrels at present, <code>barrelLR</code> and <code>barrellFB</code> will return a very large integer.
+</li> <li> The sensors  <code>barrelLR</code>, and <code>barrelFB</code> both take an optional argument, as in <code>barrelLR(n)</code> or <code>barrelFB(n)</code>, in which case they refer to the nth closest barrel.
+</li> <li> Any amount of white space (blanks, newlines and tabs) may occur between two adjacent terminals.
+</li></ul> 
+<p></p>
+Here is a program in this language, along with some comments:
+<p></p>
+<div id="highlighter_4985" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="https://ecs.victoria.ac.nz/Courses/COMP261_2019T1/Assignment4#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_4985_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_4985" menu="false" src="/foswiki/pub/System/DpSyntaxHighlighterPlugin/dp.SyntaxHighlighter/scripts/clipboard.swf"></div><a href="https://ecs.victoria.ac.nz/Courses/COMP261_2019T1/Assignment4#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="https://ecs.victoria.ac.nz/Courses/COMP261_2019T1/Assignment4#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>01</code></td><td class="content"><code class="keyword">while</code> <code class="plain">(gt(fuelLeft, </code><code class="value">0</code><code class="plain">)) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code><code class="comments">// loop as long as fuel left is &gt; 0</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>02</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">if</code> <code class="plain">(eq(numBarrels, </code><code class="value">0</code><code class="plain">)) {&nbsp;&nbsp; </code><code class="comments">// if there are no barrels, then&nbsp; wait</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>03</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">wait;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>04</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">} elif ( lt(add(oppFB,oppLR), </code><code class="value">3</code><code class="plain">) ) {&nbsp; </code><code class="comments">// if opponent is close </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>05</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">move(oppFB);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code><code class="comments">// (actually a wrong calculation!)</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>06</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">} </code><code class="keyword">else</code> <code class="plain">{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>07</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">$lr = barrelLR;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code><code class="comments">// put the relative position of </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>08</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">$fb = barrelFB;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code><code class="comments">// closest barrel into variables</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>09</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">if</code> <code class="plain">(and(eq($lr, </code><code class="value">0</code><code class="plain">), eq($fb, </code><code class="value">0</code><code class="plain">))) {&nbsp;&nbsp; </code><code class="comments">// if robot is on top of a barrel</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">takeFuel;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code><code class="comments">// take the fuel</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">} </code><code class="keyword">else</code> <code class="plain">{</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">if</code> <code class="plain">(eq($fb, </code><code class="value">0</code><code class="plain">)) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code><code class="comments">// otherwise, turn and move</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">if</code> <code class="plain">(lt($lr, </code><code class="value">0</code><code class="plain">)) {&nbsp;&nbsp;&nbsp; </code><code class="comments">// towards the closest barrel</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>14</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">turnL; </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>15</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">} </code><code class="keyword">else</code><code class="plain">{</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>16</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">turnR;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>17</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>18</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">} </code><code class="keyword">else</code> <code class="plain">{</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>19</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">if</code> <code class="plain">(gt($fb, </code><code class="value">0</code><code class="plain">)) {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>20</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">move;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>21</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">} </code><code class="keyword">else</code> <code class="plain">{</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>22</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">turnAround;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>23</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>24</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>25</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>26</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>27</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div></div></div>
+<p></p>
+<h3 id="The_RoboGame_program">  The RoboGame program </h3>
+<p></p>
+The RoboGame program consists of the following files:
+<p></p> <ul>
+<li> <code>RoboGame.java</code> has a main method which constructs the user interface.
+</li> <li> <code>WorldComponent.java</code> manages the display of the state of the game.
+</li> <li> <code>World.java</code> contains code for simulating the world.
+</li> <li> <code>Robot.java</code> contains code for the individual robot objects.  Your interpreter will call methods from the Robot class.
+</li> <li> <code>RobotProgramNode.java</code> defines the type for nodes in the abstract syntax tree your parser will construct. Each <code>RobotProgramNode</code> will have an <code>execute</code> method that takes a robot, and executes the program in the node on that robot.
+</li> <li> <code>Parser.java</code> will contain your parser and interpreter. The very top level of the parser is already provided. The file also contains a <code>main</code> method that will help you test your parser quickly without having to run the whole <code>RoboGame</code> program.
+</li> <li> <code>ParserFailureException</code> and <code>RobotInterruptedException</code> declare exceptions used by the parser and robot simulator.
+</li></ul> 
+<p></p>
+<h3 id="What_to_do_63">  What to do? </h3>
+<p></p>
+Your task is to write a parser and interpreter which can read and parse a robot program from a file, and then execute it.  
+<p></p>
+More specifically, you are to complete <code>Parser.java</code> by writing all the parse methods, and to define classes for the different types of AST node, along with the methods in those classes (e.g. <code>execute</code>) that define the interpreter.   
+<p></p>
+The assignment lays out a sequence of increasing subsets of the language which you should implement one at a time.   You should <strong>not</strong> attempt to build the parser for the whole language at once!
+<p></p>
+<h3 id="Stage_0:_Getting_started_4040_37_41">  Stage 0: Getting started (40%) </h3>
+<p></p>
+For stage 0, you are to write a parser that can parse and execute a small subset of the language that has actions and loops without conditions, given by the follow grammar:
+<p></p>
+<pre> 
+PROG  ::= STMT*
+STMT  ::= ACT ";" | LOOP 
+ACT   ::= "move" | "turnL" | "turnR" | "takeFuel" | "wait"
+LOOP  ::= "loop" BLOCK
+BLOCK ::= "{" STMT+ "}"
+</pre>
+<p></p>
+The following is an example program for this stage:
+<pre>move; move; move; turnL ; 
+wait;
+loop{
+  move; move; turnR;
+  move; move; turnR;
+  move; turnR; 
+  move; move; turnR;
+  takeFuel;
+}
+</pre>
+<p></p>
+You will need to define a node class for each of the non-terminals. It is also sensible to define a node class for each of the actions (or perhaps use an enum).  Each node class should have an <code>execute(Robot robot)</code> method.   The <code>execute</code> method for an action node will call the relevant method from the Robot class on the given robot. For example, for the <code>TurnLNode</code> class, it might be:
+<div id="highlighter_750858" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="https://ecs.victoria.ac.nz/Courses/COMP261_2019T1/Assignment4#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_750858_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_750858" menu="false" src="/foswiki/pub/System/DpSyntaxHighlighterPlugin/dp.SyntaxHighlighter/scripts/clipboard.swf"></div><a href="https://ecs.victoria.ac.nz/Courses/COMP261_2019T1/Assignment4#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="https://ecs.victoria.ac.nz/Courses/COMP261_2019T1/Assignment4#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="keyword">public</code> <code class="keyword">void</code> <code class="plain">execute(Robot robot) {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">robot.turnLeft();</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div></div></div>
+Note that the method name in the <code>Robot</code> class is not necessarily the same name as the command in the robot language.
+<p></p>
+The <code>execute</code> method for <code>LoopNode</code> will not call methods on the robot directly, but will repeatedly call the <code>execute</code> method of the <code>BlockNode</code> that it contains. Similarly, the <code>BlockNode</code> will need to call the <code>execute</code> method of each of its components in turn.
+<p></p>
+The node classes should also have a <code>toString</code> method which returns a textual representation of the node. The nodes corresponding to the PROG, STMT, LOOP and BLOCK rules will need to construct the string out of their components. For example, the <code>LoopNode</code> class might have the following method (assuming that <code>block</code> is a field containing the <code>BlockNode</code> that is contained in the <code>LoopNode</code>):
+<p></p>
+<div id="highlighter_932165" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="https://ecs.victoria.ac.nz/Courses/COMP261_2019T1/Assignment4#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_932165_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_932165" menu="false" src="/foswiki/pub/System/DpSyntaxHighlighterPlugin/dp.SyntaxHighlighter/scripts/clipboard.swf"></div><a href="https://ecs.victoria.ac.nz/Courses/COMP261_2019T1/Assignment4#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="https://ecs.victoria.ac.nz/Courses/COMP261_2019T1/Assignment4#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="keyword">public</code> <code class="plain">String toString() {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">return</code> <code class="string">"loop"</code> <code class="plain">+ </code><code class="keyword">this</code><code class="plain">.block;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div></div></div>
+<p></p>
+You will also need to create a <code>parse</code>... method for each of the rules, which takes the scanner, and returns a <code>RobotProgramNode</code>.
+<p></p>
+Hint: There will be a lot of node classes. You can put each of them in a separate file, or you can include them all in the <code>Parser.java</code> file as non-public classes, since they are only accessed by the parser itself. It depends on your IDE which option is easier to handle.
+<p></p>
+Test your parser on the example program above and the other test programs that we will provide.  <ol>
+<li> Run the main method of the <code>Parser</code> class to check whether the parser parses programs correctly.
+</li> <li> Once they parse correctly, run the <code>RoboGame</code> and load the programs into the robots to see whether the programs are executed correctly.
+</li></ol> 
+<p></p>
+Write some test programs of your own to test different parts of the language and the behaviour of the robot.
+<p></p>
+<p></p>
+<h3 id="Stage_1_Basic_language_40up_to_60_37_41">  Stage 1 Basic language (up to 60%) </h3>
+<p></p>
+For stage 1, you should extend your parser to handle the robot sensors, and IF and WHILE statements, as shown in the following grammar. The conditions in IF and WHILE statements can be restricted to simple comparisons of a sensor value with a number, e.g. <code>lt(fuelLeft, 20</code>) to determine whether there are less than 20 units of fuel left (the robot starts with 100 units).
+<p></p>
+<pre>PROG  ::= STMT*
+STMT  ::= ACT ";" | LOOP | IF | WHILE
+ACT   ::= "move" | "turnL" | "turnR" | "turnAround" | "shieldOn" |
+          "shieldOff" | "takeFuel" | "wait"
+LOOP  ::= "loop" BLOCK
+IF    ::= "if" "(" COND ")" BLOCK
+WHILE ::= "while" "(" COND ")" BLOCK
+BLOCK ::= "{" STMT+ "}"
+COND  ::= RELOP "(" SEN "," NUM ")
+RELOP ::= "lt" | "gt" | "eq"
+SEN   ::= "fuelLeft" | "oppLR" | "oppFB" | "numBarrels" |
+          "barrelLR" | "barrelFB" | "wallDist"
+NUM   ::= "-?[0-9]+"
+</pre>
+<p></p>
+Here is an example program for this stage:
+<pre>while ( gt(barrelFB, 0) ) { move; }
+if (eq(barrelLR, 0)) {
+   takeFuel;
+}
+if (lt(barrelLR, 0)) {
+   turnL;
+   while ( gt(barrelFB,0) ){ move;} 
+   takeFuel;
+}
+if (gt(barrelLR, 0)) {
+   turnR;
+   while ( gt(barrelFB,0) ){ move;} 
+   takeFuel;
+}
+wait;
+loop {
+  if ( gt(fuelLeft, 0) ) {
+     move;
+     turnL;
+  }
+}
+</pre>
+<p></p>
+You will need additional node classes and parse methods for the IF, WHILE, COND, and SEN rules. It is sensible to have a class for each of the  comparisons (less than, greater than, and equal) and for each of the sensors (fuelLeft, etc) --- again, an alternative would be to use enums for these.   The <code>execute</code> methods for the <code>IfNode</code> and <code>WhileNode</code> will need to perform the logic of testing the value of the condition in the node, and then executing the block in the node.
+<p></p>
+Note that the condition nodes (Cond, LessThan, etc) are a different type from <code>RobotProgramNode</code> since they do not need an <code>execute</code> method, but instead need an <code>evaluate</code> method which takes a robot as an argument and returns a boolean value.  You will need to define an interface type for this category of node.
+<p></p>
+The Sensor nodes are different again.  Like the condition nodes, they need an <code>evaluate</code> method, but their <code>evaluate</code> method will return an <code>int</code> not a <code>boolean</code>.  Their <code>evaluate</code> methods will need to call the appropriate methods on the robot:  <code>getFuel()</code>, <code>getOpponentLR()</code>, <code>getOpponentFB()</code>, <code>numBarrels()</code>, <code>getClosestBarrelLR()</code> or <code>getClosestBarrelFB()</code>.
+<p></p>
+<p></p>
+<h3 id="Stage_2:_Arguments_44_Else_44_and_Expressions_40up_to_75_37_41">  Stage 2: Arguments, Else, and Expressions (up to 75%) </h3>
+<p></p>
+For this stage, you should extend your parser to handle:
+<p></p> <ul>
+<li> actions with optional arguments: <code>move</code> and <code>wait</code> can take an argument specifying how many move or wait steps to take.
+</li> <li> <code>if</code> statements with optional <code>else</code> clauses
+</li> <li> arithmetic expressions that compute values with sensors and numbers.
+</li> <li> more complex conditions with logical operators and expressions; comparisons between any expressions, not just a sensor and a number.
+</li> <li> more restrictive form of integer constant, which does not allow leading zeroes.
+</li></ul> 
+<p></p>
+The grammar for stage 2 is:
+<p></p>
+<pre>PROG  ::= STMT*
+STMT  ::= ACT ";" | LOOP | IF | WHILE
+ACT   ::= "move" [ "(" EXP ")" ] | "turnL" | "turnR" | "turnAround" | 
+          "shieldOn" | "shieldOff" | "takeFuel" | "wait" [ "(" EXP ")" ]
+LOOP  ::= "loop" BLOCK
+IF    ::= "if" "(" COND ")" BLOCK [ "else" BLOCK ]
+WHILE ::= "while" "(" COND ")" BLOCK
+BLOCK ::= "{" STMT+ "}"
+EXP   ::= NUM | SEN | OP "(" EXP "," EXP ")"  
+SEN   ::= "fuelLeft" | "oppLR" | "oppFB" | "numBarrels" |
+	  "barrelLR" | "barrelFB" | "wallDist"
+OP    ::= "add" | "sub" | "mul" | "div"
+COND  ::= "and" "(" COND "," COND ")" | "or" "(" COND "," COND ")" | "not" "(" COND ")"  | 
+          RELOP "(" SEN "," NUM ")
+RELOP ::= "lt" | "gt" | "eq"
+NUM   ::= "-?[1-9][0-9]*|0"
+</pre>
+<p></p>
+Here is a program for the stage 2 parser:
+<p></p>
+<pre>move(8);
+turnL; 
+loop {
+  while ( or(eq(numBarrels, 0),
+             lt(add(oppFB, oppLR), add(barrelFB,barrelLR))) ) {
+    if (lt(oppFB,0)) { turnAround; }
+    else { if (gt(oppFB,0)) { move(add(1, div(oppFB, 2))); } 
+    else { if (lt(oppLR,0)) { turnL;}
+    else { if (gt(oppLR,0)) { turnR;}
+    else { if (eq(oppLR,0)) { takeFuel; }}}}}
+  }
+  if ( and(eq(barrelFB, 0),eq(barrelLR, 0))) { takeFuel; }
+  else { if ( lt(barrelFB, 0) ){ turnAround; }
+  else { if ( gt(barrelFB, 0) ) { move(barrelFB); }
+  else { if ( lt(barrelLR, 0) ) { turnL; }
+  else { if ( gt(barrelLR, 0) ) { turnR; }}}}}
+}
+</pre>
+<p></p>
+You will need to:
+<p></p> <ul>
+<li> Add node classes and parse methods to handle the expressions.
+</li> <li> Extend your parse methods for <code>if</code> statements to handle an optional <code>else</code>. After parsing the condition and the "then" block, the method needs to check whether there is an "=else=" to determine whether it needs to parse an else block or simply return the <code>IfNode</code> without an else block. The <code>execute</code> method also needs to be extended.
+</li> <li> Extend your parse methods for the move and wait actions to check for an optional argument. They should check for a "(" to determine whether there is an argument or not. The <code>execute</code> methods also need to be extended. Note that the Robot class does not provide a <code>move</code> or <code>idleWait</code> method with an argument - your <code>execute</code> method needs to call the <code>move</code> or <code>idlewait</code> method the specified number of times.
+</li></ul> 
+<p></p>
+<h3 id="Stage_3_Variables_40up_to_85_37_41">  Stage 3 Variables (up to 85%) </h3>
+<p></p>
+For this stage, you should extend your parser to handle:
+<p></p> <ul>
+<li> variables and assignment statements.
+</li> <li> a sequence of <code>elif</code> elements in an <code>if</code> statement.
+</li> <li> optional arguments to <code>barrelLR</code> and <code>barrelFB</code> to access the relative position of barrels other than the closest one.
+</li></ul> 
+<p></p>
+The grammar for this stage and an example program are given above, under <span class="foswikiGreenFG">The Robot Language</span>.
+<p></p>
+Variables are identifiers starting with a $, and can hold integer values.  Assignment statements can assign a value to a variable, and variables can be used inside expressions.  Variables do not need to be declared. If a variable is used in an expression before a value has been assigned to it, it is assumed to have the value 0.  The scope of all variables is the whole program. 
+<p></p>
+Evaluating an expression now needs to be able to access a map containing all the current variables and their values, and an assignment statement needs to update the value of a variable in the map.  If a variable being accessed which is not in the map should be added and given the value 0.
+<p></p>
+The <code>Robot</code> class provides four methods for accessing relative barrel position: <code>getClosestBarrelLR()</code>, <code>getClosestBarrelFB()</code>, <code>getBarrelLR(int n)</code> and <code>getClosestBarrelFB(int n)</code>. The last two return the relative position of the nth closest barrel, allowing the program to identify barrels other than the closest one. With these, you could write robot programs that determine which barrel to aim for, if the opponent is already closer to the closest barrel.
+<p></p>
+<h3 id="Stage_4:_Challenge_40up_to_100_37_41"> Stage 4: Challenge (up to 100%) </h3>
+<p></p>
+For this stage, you should extend your parser and interpreter to:
+<p></p> <ul>
+<li> Allow infix operators and optional parentheses for both arithmetic and logical expressions.
+</li> <li> Require variables to be declared before they can be used.
+</li> <li> Allow nested scope, so that variables declared inside a block (i) are only accessible within the block, and (ii) "shadow" any variables of the same name declared in the program or outer blocks. 
+</li></ul> 
+<p></p>
+The grammar for this stage is: 
+<p></p>
+<!-- Note: The grammar did have "shieldOn" "(" COND ")" - I have no idea why or what it is supposed to be - it is not explained in the text, so I took it out.  LG -->
+<p></p>
+<pre>PROG  ::= [ DECL ] STMT*
+DECL  ::= "vars" VAR [ "," VAR ]* ";"
+STMT  ::= ACT ";" | ASSGN ";" | LOOP | IF | WHILE | BLOCK
+ASSGN ::= VAR "=" EXP
+LOOP  ::= "loop" STMT
+IF    ::= "if" "(" COND ")" BLOCK [ "elif" "(" COND ")" BLOCK ]* [ "else" BLOCK ]
+WHILE ::= "while" "(" COND ")" BLOCK
+BLOCK ::= "{" [ DECL ] STMT* "}"
+ACT   ::= "move" [ "(" EXP ")" ] | "turnL" | "turnR" | "turnAround" | 
+	  "shieldOn" | "shieldOff" | "takeFuel" | "wait" [ "(" EXP ")" ]
+EXP   ::= NUM | EXP OP EXP |  SEN | VAR | "(" EXP ")"
+SEN   ::= "fuelLeft" | "oppLR" | "oppFB" | "numBarrels" | 
+	  "barrelLR" [ "(" EXP ")" ] | "barrelFB" [ "(" EXP ")" ] |
+	  "wallDist"
+OP    ::= "+" | "-" | "*" | "/"
+COND  ::= BOOL | COND LOGIC COND | "!" COND |
+          EXP COMP EXP | "(" COND ")"
+LOGIC ::= "&amp;&amp;" | "||"
+COMP  ::= "&lt;" | "&lt;=" | "&gt;" | "&gt;=" | "==" | "!="
+BOOL  ::= "true" | "false"
+VAR   ::= "\\$[A-Za-z][A-Za-z0-9]*"
+NUM   ::= "-?[1-9][0-9]*|0"
+</pre>
+<p></p>
+Implementing some of these extensions will require restructuring of the grammar in ways that have not (yet) been addressed in the lectures.
+<p></p>
+To allow infix expressions, you will need to think carefully about how to ensure that the parser is able to choose the right path.
+<p></p>
+To handle declarations, you will need to build a set of declared variables when the declaration is parsed, and then check that any variables used in the program are in this set.  You might consider making this set part of the map used to store values when the program is executed.  Note that a block can be now occur anywhere that a statement can.
+<p></p>
+To allow declarations to be nested, you need to be able to add variables to the set of declared variables at the start of a block, and remove them at the end of the  block.  This also means that you must be able to have more than one occurrence of a given variable and be able to identify the one with the inner-most scope.  You should start by just implementing top level declarations and get that working before attempting to implement nested declarations! 
+<p></p>
+<h3 id="What_to_hand_in:_code_and_report.">  What to hand in: code and report. </h3>
+<p></p>
+Submit:
+<p></p> <ul>
+<li> Your <code>Parser.java</code> file and any additional files you required in your implementation if you chose to place them in separate files. 
+</li> <li> A jar file of the complete program so that it can be run by the marker.
+</li> <li> If you attempt Stage 4, please submit a separate source file and jar file for marking.
+</li> <li> A brief report which lists the parts that you attempted, indicating what worked and what did. Include any of your own robot programs that you tested your parser on.  If your program does not work correctly, give test cases showing what goes wrong and explaining what you think would be required to fix it.
+</li></ul>  </div><!-- /foswikiTopic-->
+  <div class="foswikiContentFooter"></div><div class="foswikiFormSteps"><div class="patternTopicActions foswikiFormStep"><span class="patternActionButtons">
+<span><a href="https://ecs.victoria.ac.nz/Courses/COMP261_2019T1/Assignment4?cover=print;" rel="nofollow" title="Printable version of this topic" accesskey="p"><span class="foswikiAccessKey">P</span>rint version</a></span><span class="foswikiSeparator">&nbsp;|&nbsp;</span><span><a href="https://ecs.victoria.ac.nz/Courses/COMP261_2019T1/Assignment4?template=backlinksweb" rel="nofollow" title="Search the Courses/COMP261_2019T1 Web for topics that link to here" accesskey="b"><span class="foswikiAccessKey">B</span>acklinks</a></span><span class="foswikiSeparator">&nbsp;|&nbsp;</span></span></div></div>
+</div>
+</main>
+	 </div>
+  </section> 
+<footer role="contentinfo">
+  <section class="footer-secondary two-columns">
+	 <div class="centraliser">
+		<!-- Sub-site's related or recommended links -->
+		<div class="block">
+		  <h2>Useful links</h2>
+		  <nav role="navigation">
+				<ul role="menubar"> <ul>
+<li> <a href="https://www.victoria.ac.nz/ecs/study/undergraduate-study">Undergraduate study</a>
+</li> <li> <a href="https://www.victoria.ac.nz/ecs/study/postgraduate-study">Postgraduate study</a>
+</li> <li> <a href="https://www.victoria.ac.nz/ecs/research/groups">Research groups</a>
+</li> <li> <a href="https://www.victoria.ac.nz/ecs/staff">Staff</a>
+</li> <li> <a href="https://ecs.victoria.ac.nz/Main">Wiki</a>
+</li></ul> 
+<p></p>
+</ul>
+		  </nav>
+		</div>
+		<!-- Sub-site's related links -->
+		<div class="block contacts">
+		  <a href="https://www.victoria.ac.nz/ecs/about/contact" title="See all contact information" class="link-more">More contacts</a>
+<p></p>
+		  <h2>Useful contacts</h2>
+		  <address>
+			 <!-- Phone numbers -->
+			 <ul class="phones">
+				<li><a href="tel:+64 4 463 5341" title="Call ECS">+64 4 463 5341</a> </li>
+			 </ul>
+			 <!-- Mail addresses -->
+			 <ul class="mails">
+				<li> <a href="mailto:office@ecs.vuw.ac.nz" title="Send an email to ECS">office@ecs.vuw.ac.nz</a> </li>
+			 </ul>
+		  </address>
+		</div>
+	 </div>
+  </section>
+  <!-- Footer Related links from global site -->
+  <section class="footer-secondary">
+	 <div class="centraliser">
+		<div class="block">
+		  <h2>Victoria University  of Wellington</h2>
+		  <nav role="navigation">
+			 <ul role="menubar">
+				<li role="menuitem"><a href="https://www.victoria.ac.nz/about/explore-victoria/faculties-schools" role="menuitem" title="Read about Faculties">Faculties</a></li>
+				<li role="menuitem"><a href="https://www.victoria.ac.nz/about/contacts" role="menuitem" title="Read about Contacts and directories">Contacts and directories</a></li>
+				<li role="menuitem"><a href="https://www.victoria.ac.nz/about/explore-victoria" role="menuitem" title="Read about Campuses">Campuses</a></li>
+				<li role="menuitem"><a href="https://www.victoria.ac.nz/study" role="menuitem" title="Read about Study">Study</a></li>
+				<li role="menuitem"><a href="https://www.victoria.ac.nz/students" role="menuitem" title="Read about Students">Students</a></li>
+				<li role="menuitem"><a href="https://www.victoria.ac.nz/staff" role="menuitem" title="Read about Staff">Staff</a></li>
+				<li role="menuitem"><a href="https://www.victoria.ac.nz/about/careers" role="menuitem" title="Read about Careers">Careers</a></li>
+				<li role="menuitem"><a href="https://www.victoria.ac.nz/about/alumni" role="menuitem" title="Read about Alumni">Alumni</a></li>
+			 </ul>
+		  </nav>
+		</div>
+	 </div>
+  </section>
+  <!-- Meta-links and contacts that are shared between sub-sites -->
+  <section class="footer-primary">
+	 <div class="centraliser">
+		<div class="block">
+		  <!-- Smaller version of logotype -->
+		  <div class="logo">
+			 <a href="https://ecs.victoria.ac.nz/" title="Victoria University of Wellington homepage">
+				<img class="logo" src="./Assignment 4 _files/logo-white-full-footer.svg" alt="Victoria University of Wellington - Te Whare Wānanga o te Ūpoko o te Ika a Māui">
+			 </a>
+		  </div>
+		  <!-- Global contacts -->
+		  <ul class="contacts">
+			 <li>
+				<a title="Call Victoria about general enquiries" href="tel:+6444721000">+64 4 472 1000</a>
+			 </li>
+			 <li>
+				<a title="Write Victoria an email" href="mailto:info@victoria.ac.nz">info@victoria.ac.nz</a>
+			 </li>
+			 <li> Enrolments: <a title="Call Victoria regarding enrolments" href="tel:+64800842867">0800 VICTORIA</a> </li>
+			 <li> Emergency: <a title="Call in case of emergency" href="tel:+6444639999">+64 4 463 9999</a> or ext. 8888 (internal) </li>
+		  </ul>
+		</div>
+		<div class="block small">
+		  <nav role="navigation">
+			 <ul role="menubar" class="minilinks">
+				<li role="menuitem"><a title="See ..." href="https://www.victoria.ac.nz/site-info">Site info</a></li>
+				<li role="menuitem"><a title="See ..." href="https://www.victoria.ac.nz/site-info/site-map">Site map</a></li>
+				<li role="menuitem"><a title="See ..." href="https://www.victoria.ac.nz/site-info/feedback">Feedback</a></li>
+				<li role="menuitem"><a title="See ..." href="https://www.victoria.ac.nz/site-info/glossary">Glossary</a></li>
+			 </ul>
+		  </nav>
+		  <small class="copyright">Copyright © Victoria University of Wellington, New Zealand</small>
+		</div>
+	 </div>
+  </section>
+</footer>
+<script src="./Assignment 4 _files/toolkit.min.js"></script>
+<p></p>
+</body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></html>

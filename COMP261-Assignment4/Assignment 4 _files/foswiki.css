@@ -1,0 +1,99 @@
+html body {
+    font-family: "Helvetica Neue","Segoe WP","Helvetica","Arial";
+    background-color: #fff;
+    font-size: 100%;
+    color: #424242;
+    height: auto;
+}
+:link:hover, *:visited:hover {
+    text-decoration: none;
+}
+.foswikiToc li {
+    background-image: none;
+}
+.blogPostAddOnItem {
+    padding: 1em 0 1.25em 0;
+    border-bottom: 1px solid #ddd;
+}
+.twikiLeft {
+    float: left;
+    position: relative;
+}
+#global-search input[type="text"] {
+    line-height: inherit;
+}
+.site a.foswikiCurrentTopicLink {
+    font-weight: 600;
+    border-bottom: none;
+}
+.site a.foswikiCurrentTopicLink {
+    background-color: rgba(0,0,0,.15);
+}
+.site a.foswikiCurrentTopicLink:before {
+    position: absolute;
+    display: block;
+    content: "";
+    top: .5rem;
+    bottom: .5rem;
+    width: .25rem;
+    margin-left: -.625rem;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+code {
+    background-color: #ededeb;
+    padding: 0 0.2em;
+}
+pre {
+    max-width: 972px;
+}
+.erp-edittable {
+    background-position: 0 -16px !important;
+}
+.erp-button {
+    background-image: url("/foswiki/pub/System/JQueryPlugin/plugins/ui/themes/foswiki/images/ui-icons-famfamfam.png") !important;
+    padding: 0;
+}
+.ui-icon-cancel {
+    background-position: 0 -128px !important;
+}
+.ui-icon-disk {
+    background-position: -96px -112px !important;
+}
+.ui-icon-plusthick {
+    background-position: -32px -128px !important;
+}
+
+@media print {
+    html body {
+        font-size: 14px;
+        display: block;
+    }
+    body, p {
+        line-height: 1;
+    }
+    #global-nav, .breadcrumbs, footer, .logo, .sidebar {
+        display: none;
+    }
+    .site-intro h1 {
+        text-align: left;
+    }
+    #attachmentsshow,
+    #attachmentshide,
+    .patternTopicAction,
+    .commentPlugin,
+    .twistyTrigger,
+    .foswikiContentFooter,
+    .editTableEditImageButton {
+        display:none;
+    }
+    pre, code {
+        color:#000;
+    }
+    #content a[href]:after {
+        content: "";
+    }
+    #content a[href^="/"]:after {
+        content: "";
+    }
+}
